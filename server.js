@@ -7,7 +7,7 @@ const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const apiroute = require("./routes/api.js");
-
+const PORT  = process.env.PORT || 3000;
 //logging posr req middlewhare(addes payload to req.body)
 app.use(logger("dev"));
 
@@ -34,6 +34,6 @@ app.get("/", (req, res) => {
 
 
 // Listen on port 3000
-app.listen(3000, () => {
-  console.log(`http://localhost:${3000}`,);
+app.listen(PORT, () => {
+  console.log(`http://localhost:3000`,);
 });
