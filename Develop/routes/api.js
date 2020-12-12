@@ -33,7 +33,7 @@ router.get("/api/workouts", (req,res) =>{
     });
     
 
-}); .
+}); 
 router.get("/api/workouts/:id", (req,res) =>{
     Workout.findOne({_id:req.params.id}, function(err, results){
         if(err){
