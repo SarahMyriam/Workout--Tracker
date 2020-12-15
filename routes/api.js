@@ -8,7 +8,9 @@ router.post("/api/workouts",(req,res) => {
             console.log(err);
             return;
         }
-        res.json(results);
+        console.log(res.json(results));
+        
+        
     });
 
 });
