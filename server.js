@@ -11,6 +11,7 @@ const PORT  = process.env.PORT || 3000;
 //logging posr req middlewhare(addes payload to req.body)
 app.use(logger("dev"));
 
+require("./routes/html-routes.js")(app);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -31,7 +32,7 @@ app.get("/", (req, res) => {
 //routes
 //GET Api workouts
 //
-
+app.use(require('./routes/api.js'));
 
 // Listen on port 3000
 app.listen(PORT, () => {
